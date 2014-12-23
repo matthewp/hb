@@ -1,0 +1,17 @@
+{
+  "name": "hb",
+  "version": "0.0.0",
+  "description": "command line handlebars templating for piping json through",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Julian Haeger",
+  "license": "ISC",
+  "bin": {
+    "hb": "index.js"
+  },
+  "dependencies": {
+    "handlebars": "^2.0.0"
+  }
+}
