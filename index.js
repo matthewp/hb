@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var handlebars = require('handlebars');
 var template = handlebars.compile(process.argv[2]);
 process.stdin.setEncoding('utf8');
