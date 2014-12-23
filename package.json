@@ -1,5 +1,5 @@
 {
-  "name": "hb",
+  "name": "handlebars-cli",
   "version": "0.1.0",
   "description": "command line handlebars templating for piping json through",
   "main": "index.js",

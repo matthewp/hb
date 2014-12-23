@@ -1,0 +1,107 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.4.14
+3 info using node@v0.10.29
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/jhaeger/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/Users/jhaeger/.npm/hb/0.1.0/package.tgz', '.' ]
+11 verbose tarball /Users/jhaeger/.npm/hb/0.1.0/package.tgz
+12 verbose folder .
+13 info prepublish hb@0.1.0
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/jhaeger/.npm/1f1177db-tar.lock
+16 silly lockFile 8d8f0df1-jhaeger-npm-hb-0-1-0-package-tgz tar:///Users/jhaeger/.npm/hb/0.1.0/package.tgz
+17 verbose lock tar:///Users/jhaeger/.npm/hb/0.1.0/package.tgz /Users/jhaeger/.npm/8d8f0df1-jhaeger-npm-hb-0-1-0-package-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 8d8f0df1-jhaeger-npm-hb-0-1-0-package-tgz tar:///Users/jhaeger/.npm/hb/0.1.0/package.tgz
+21 silly lockFile 8d8f0df1-jhaeger-npm-hb-0-1-0-package-tgz tar:///Users/jhaeger/.npm/hb/0.1.0/package.tgz
+22 silly lockFile 02b7cb1c-ers-jhaeger-npm-hb-0-1-0-package /Users/jhaeger/.npm/hb/0.1.0/package
+23 verbose lock /Users/jhaeger/.npm/hb/0.1.0/package /Users/jhaeger/.npm/02b7cb1c-ers-jhaeger-npm-hb-0-1-0-package.lock
+24 silly lockFile 02b7cb1c-ers-jhaeger-npm-hb-0-1-0-package /Users/jhaeger/.npm/hb/0.1.0/package
+25 silly lockFile 02b7cb1c-ers-jhaeger-npm-hb-0-1-0-package /Users/jhaeger/.npm/hb/0.1.0/package
+26 silly lockFile 3a52ce78- .
+27 silly lockFile 3a52ce78- .
+28 silly publish { name: 'hb',
+28 silly publish   version: '0.1.0',
+28 silly publish   description: 'command line handlebars templating for piping json through',
+28 silly publish   main: 'index.js',
+28 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+28 silly publish   author: { name: 'Julian Haeger' },
+28 silly publish   license: 'ISC',
+28 silly publish   bin: { hb: 'index.js' },
+28 silly publish   dependencies: { handlebars: '^2.0.0' },
+28 silly publish   gitHead: '923dbac89bfb8679803951a2d8009dda4208bc73',
+28 silly publish   readme: 'ERROR: No README data found!',
+28 silly publish   _id: 'hb@0.1.0',
+28 silly publish   _shasum: '601c87a1ea66ef9c538568d5e4a9e3a894bc76f0',
+28 silly publish   _from: '.' }
+29 verbose url raw hb
+30 verbose url resolving [ 'https://registry.npmjs.org/', './hb' ]
+31 verbose url resolved https://registry.npmjs.org/hb
+32 info trying registry request attempt 1 at 14:18:24
+33 http PUT https://registry.npmjs.org/hb
+34 http 403 https://registry.npmjs.org/hb
+35 verbose headers { date: 'Tue, 23 Dec 2014 14:18:25 GMT',
+35 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+35 verbose headers   'content-type': 'application/json',
+35 verbose headers   'cache-control': 'max-age=60',
+35 verbose headers   'content-length': '734',
+35 verbose headers   'accept-ranges': 'bytes',
+35 verbose headers   via: '1.1 varnish',
+35 verbose headers   'x-served-by': 'cache-ams4127-AMS',
+35 verbose headers   'x-cache': 'MISS',
+35 verbose headers   'x-cache-hits': '0',
+35 verbose headers   'x-timer': 'S1419344304.390264,VS0,VE614',
+35 verbose headers   'keep-alive': 'timeout=10, max=50',
+35 verbose headers   connection: 'Keep-Alive' }
+36 error publish Failed PUT 403
+37 error Error: forbidden user: foo42 not authorized to modify hb
+37 error Changed: description "Hummingbird generator & cli." -> "command line handlebars templating for piping json through"
+37 error Changed: dist-tags.latest "0.0.0" -> "0.1.0"
+37 error Added: versions.0.1.0
+37 error Changed: readme "hb\u000a==\u000a\u000aCommand line stuff for hummingbird." -> "ERROR: No README data found!"
+37 error Changed: time.modified "2014-09-10T08:43:07.353Z" -> "2014-12-23T14:20:10.219Z"
+37 error Added: time.0.1.0
+37 error Deleted: homepage
+37 error Deleted: keywords
+37 error Deleted: repository
+37 error Changed: author.name "Chapman University" -> "Julian Haeger"
+37 error Deleted: bugs
+37 error Changed: license "MIT" -> "ISC"
+37 error Changed: readmeFilename "README.md" -> ""
+37 error Added: _attachments: hb
+37 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:274:14)
+37 error     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:212:65)
+37 error     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:123:22)
+37 error     at Request.emit (events.js:98:17)
+37 error     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:893:14)
+37 error     at Request.emit (events.js:117:20)
+37 error     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:844:12)
+37 error     at IncomingMessage.emit (events.js:117:20)
+37 error     at _stream_readable.js:929:16
+37 error     at process._tickCallback (node.js:419:13)
+38 error If you need help, you may report this *entire* log,
+38 error including the npm and node versions, at:
+38 error     <http://github.com/npm/npm/issues>
+39 error System Darwin 13.4.0
+40 error command "node" "/usr/local/bin/npm" "publish"
+41 error cwd /Users/jhaeger/code/personal/hb
+42 error node -v v0.10.29
+43 error npm -v 1.4.14
+44 verbose exit [ 1, true ]
