@@ -1,21 +1,29 @@
 #!/usr/bin/env node
 var handlebars = require('handlebars');
-var template = handlebars.compile(process.argv[2]);
+
+var templateString = process.argv[2];
+if(templateString === '-i') {
+  var file = process.argv[3];
+  templateString = require('fs').readFileSync(file, 'utf8');
+}
+
+var template = handlebars.compile(templateString);
 process.stdin.setEncoding('utf8');
 
-process.stdin.on('readable', function () {
-  var chunk = process.stdin.read();
-  if (chunk !== null) {
-    var lines = chunk.split('\n');
-    lines.forEach(function (chunk) {
-      try {
-        var line = JSON.parse(chunk);
-        process.stdout.write(template(line) + '\n');
-      } catch (e) {}
-    });
-  }
+var stream = process.stdin;
+
+var str = '';
+stream.on('data', function(chunk){
+  str += chunk;
 });
 
-process.stdin.on('end', function () {
-  process.exit(0);
+stream.on('end', function(){
+  try {
+    var data = JSON.parse(str);
+    process.stdout.write(template(data));
+    process.exit(0);
+  } catch(e) {
+    console.error("Got an error", e);
+    process.exit(1);
+  }
 });

@@ -1,6 +1,6 @@
 {
-  "name": "handlebars-cli",
-  "version": "0.1.2",
+  "name": "handlebars-render",
+  "version": "1.0.0",
   "description": "command line handlebars templating for piping json through",
   "main": "index.js",
   "scripts": {
