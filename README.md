@@ -33,7 +33,7 @@ which would produce:
 <html>
 <head></head>
 <body>
-  <h1>{{foo}}</h1>
+  <h1>bar</h1>
 </body>
 </html>
 ```
